@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practical Application Activity</title>
+</head>
+<body>
+
+    <!-- Main Heading -->
+    <h1 id="main-heading">HTML Practical Application Activity</h1>
+
+    <!-- 1. IMAGES -->
+    <h2 id="images-section">Images</h2>
+    <img src="Hinata.webp" alt="Hinata from Haikyuu" width="300">
+    <img src="Kenma.webp" alt="Kenma from Haikyuu" width="400">
+    <figure>
+        <img src="Daichi.webp" alt="Captain of Haikyuu" width="350">
+        <figcaption>Figure 1: Captain of Haikyuu</figcaption>
+    </figure>
+
+    <hr>
+
+    <!-- 2. HYPERLINKS -->
+    <h2 id="hyperlinks-section">Hyperlinks</h2>
+    <ul>
+        <!-- Internal link pointing to another section on the same page -->
+        <li><a href="#multimedia-section">Jump to Multimedia Section (Internal Link)</a></li>
+        <!-- External link opening in a new tab -->
+        <li><a href="https://www.github.com" target="_blank">Visit GitHub (External Link)</a></li>
+        <!-- Email link -->
+        <li><a href="mailto:support@example.com">Send Email Support (Email Link)</a></li>
+        <!-- Same-page anchor link -->
+        <li><a href="#dom-section">Jump to HTML DOM Section (Anchor Link)</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- 3. MULTIMEDIA -->
+    <h2 id="multimedia-section">Multimedia</h2>
+    
+    <h3>Audio Player</h3>
+    <audio controls>
+        <source src="Ysabelle Cuevas - I Like You So Much, You'll Know It (Lyrics).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video Player</h3>
+    <video controls width="400">
+        <source src="Ysabelle Cuevas - I Like You So Much, You'll Know It (Lyrics).mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <hr>
+
+    <!-- 4. USEFUL TAGS -->
+    <h2 id="useful-tags-section">Useful Tags</h2>
+    
+    <!-- I chose the code tag to display inline file names and attribute syntax for the character images. -->
+    <p>To display character visuals, ensure your source files like <code>Hinata.webp</code> and <code>Kenma.webp</code> are placed in your project folder.</p>
+
+    <!-- I chose the pre tag to display preformatted character details with preserved spacing. -->
+    <pre>
+    Character: Shoyo Hinata
+    Team: Karasuno High
+    Position: Middle Blocker
+    </pre>
+
+    <!-- I chose the copyright entity to attribute media performance ownership for the audio and video track. -->
+    <p>Audio and video track performance rights &copy; 2026 Ysabelle Cuevas.</p>
+
+    <hr>
+
+    <!-- 5. HTML DOM -->
+    <h2 id="dom-section">HTML DOM</h2>
+    <p id="dom-description">The screenshot below displays the Document Object Model tree structure captured from browser developer tools.</p>
+    <div id="screenshot-container">
+        <img id="dom-screenshot" src="DOM-Tree.png" alt="DOM tree inspection screenshot" width="500">
+    </div>
+
+</body>
+</html>
+
+<!-- 
+Parent-Child Relationship Explanation:
+The body element acts as the primary parent container holding all visible page elements, including headings, sections, and structural tags. Inside the multimedia section, the video tag serves as the direct parent container for the source element nested within it. Similarly, the figure element operates as a parent wrapper that securely contains both the image and the figcaption elements.
+-->
