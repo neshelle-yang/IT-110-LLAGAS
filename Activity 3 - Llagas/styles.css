@@ -1,0 +1,174 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f1fc;
+  color: rgb(43, 47, 76);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 32px 16px;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Typography and navigation */
+/* The later header h1 rule wins: both selectors have equal specificity, so source order decides. */
+header h1 {
+  color: navy;
+}
+
+header h1 {
+  color: #493b83;
+  font-size: 2.25rem;
+}
+
+header,
+footer {
+  margin: 0 auto 24px;
+  max-width: 760px;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 4px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background-color: rgb(226, 229, 250);
+  color: #493b83;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+nav a:hover {
+  background-color: #6653a6;
+  color: white;
+}
+
+/* Card layout and content */
+.card {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto 24px;
+  padding: 24px;
+  border: 2px solid #d0cce8;
+  border-radius: 14px;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(65, 55, 120, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  color: #4d488e;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.intro {
+  color: rgb(68, 72, 112);
+  font-size: 1.05rem;
+}
+
+.intro::first-letter {
+  color: #7257b7;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+#about {
+  position: relative;
+  border-color: #7893d2;
+}
+
+#about::after {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background-color: #e9e4fb;
+  color: #493b83;
+  content: "PROFILE";
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* The card renders 500px wide: 448px content + 48px padding + 4px borders. */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  list-style: none;
+}
+
+.skills-list > li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: #eee9fb;
+  color: #55428f;
+  font-weight: 700;
+}
+
+/* Display and visibility */
+.hide-none {
+  display: none;
+}
+
+.hide-visibility {
+  visibility: hidden;
+}
+
+/* display:none removes an element and its layout space; visibility:hidden hides it but keeps its space. */
+.scroll-box {
+  height: 150px;
+  overflow: auto;
+}
+
+footer {
+  color: #625d83;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 24px 12px;
+  }
+
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .scroll-box {
+    height: 140px;
+  }
+}
+
+/* Reflection
+1. The second header h1 rule wins because both rules target the same thing. When two rules are equally specific, the one written last is used.
+2. With content-box, the card would be 552px wide in total. That is 500px of content, plus 48px of padding and 4px of borders.
+3. I would use visibility:hidden when I want to hide something but keep its space on the page. This way, the other items do not move around.
+*/
